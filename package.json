@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "build": "npm run clean && rspack build -c rspack.config.ts --mode production",
+        "build": "npm run clean && rspack build -c rspack.config.ts --mode production && rm -rf ./www/dev && zip -r ./www.zip ./www",
         "clean": "rm -rf ./www",
         "test": "jest"
     },

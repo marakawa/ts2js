@@ -39,6 +39,13 @@ jobs:
               uses: actions/upload-pages-artifact@v1
               with:
                   path: 'www/'
+            - name: Release
+              uses: 'marvinpinto/action-automatic-releases@latest'
+              with:
+                  repo_token: '${{ secrets.GITHUB_TOKEN }}'
+                  prerelease: false
+                  files: |
+                      www.zip
     deploy:
         needs: build-and-test
         runs-on: ubuntu-latest
