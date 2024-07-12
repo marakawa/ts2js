@@ -1,4 +1,4 @@
-const ts2js = require('../src/index.ts').default
+const ts2js = require('./index.ts').default
 
 const tsCode = `
 let x: string;
