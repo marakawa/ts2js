@@ -1,4 +1,5 @@
 import path from 'path'
+import packageJson from './package.json'
 
 export default {
     entry: path.join(__dirname, './src/index.ts'),
@@ -7,10 +8,11 @@ export default {
     },
     devtool: false,
     output: {
+        filename: packageJson.name + '.js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
         library: {
-            name: '[name]',
+            name: packageJson.name,
             type: 'umd',
         },
     },
