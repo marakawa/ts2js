@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "build": "npm run clean && rspack build -c rspack.config.ts --mode production",
-        "clean": "rm -rf ./www",
+        "clean": "rm -rf ./dist",
         "test": "jest"
     },
     "keywords": [
