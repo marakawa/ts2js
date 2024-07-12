@@ -8,8 +8,8 @@ export default {
     },
     devtool: false,
     output: {
+        path: path.resolve(__dirname, 'www'),
         filename: packageJson.name + '.js',
-        path: path.resolve(__dirname, 'dist'),
         clean: true,
         library: {
             name: packageJson.name,
